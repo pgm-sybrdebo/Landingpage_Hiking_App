@@ -1,0 +1,109 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: $space-sbase $space-medium;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    &--card {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        color: $primary-textColor;
+        border-radius: $radius-lg;
+        z-index: 1;
+        transition: $normal-transition;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $button-color;
+            border-radius: $radius-lg;
+            z-index: -2;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: $button-hover;
+            border-radius: $radius-lg;
+            z-index: -1;
+            transition: $normal-transition;
+        }
+
+        &__icon {
+            margin-left: $space-eSmall;
+            color: $primary-textColor;
+            font-size: 1.2rem;
+            transition: $normal-transition;
+        }
+    }
+
+    &--join {
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    &--submit {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        border-radius: $radius-base;
+        background-color: $accent-color;
+        color: $primary-textColor;
+        cursor: pointer;
+        transition: $normal-transition;
+
+        &::after {
+            content: 'Send message';
+        }
+
+        &:hover {
+            background-color: $button-hover;
+        }
+    }
+}
+
+.onclick {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 8px solid $divider-color;
+    border-radius: 100%;
+    font-size: 0;
+    border-left-color: $accent-color;
+    animation-name: rotating;
+    animation-duration: 2s;
+    animation-delay: 0.25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    &:after {
+      content:"";
+    }
+    &:hover {
+      background-color: transparent;
+    }
+}
+  .validate {
+    color: $primary-textColor;
+    background-color: $button-color;
+
+    &:after {
+      font-family:'FontAwesome';
+      content:"\f00c";
+    }
+
+    &:hover {
+        background-color: $button-color;
+    }
+  }

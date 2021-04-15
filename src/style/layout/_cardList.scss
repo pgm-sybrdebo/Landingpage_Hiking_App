@@ -1,0 +1,62 @@
+.cardsList {
+    padding: $space-base;
+
+    &__title {
+        margin-bottom: $space-base;
+
+        &:before {
+            @include circle();
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        &--wrap {
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+
+        &--customers {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &__customer {
+            margin-left: $space-lg;
+            margin-bottom: $space-lg;
+            width: calc(20% - 2.4rem);
+            text-align: center;
+
+            &:nth-child(5n + 1) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+
+        &__wrapper {
+            overflow-x: auto;
+            
+            &::-webkit-scrollbar {
+                background-color: #fff;
+                height: 0.75rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $accent-color;
+                border-radius: 1rem;
+            }
+
+            &__list {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: start; 
+            }
+        }
+    }
+}

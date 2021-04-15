@@ -1,0 +1,39 @@
+---
+tags:
+title: features
+layout: base
+eleventyNavigation:
+    key: Features
+    order: 2
+permalink: "features/"
+---
+
+<article class="h-layout h-layout-p">
+    <h1 class="spaceLeft spaceRight">All our features</h1>
+
+    <div class="cardsList">
+        <ul class="cardsList__list cardsList__list--wrap">
+            {% for feature in collections.features %}
+                <li class="card">
+                    <span class="card__icon">
+                        <i class="fas {{ feature.data.icon }}"></i>
+                    </span>
+
+                    <div class="card__content">
+                        <span class="card__content__title">{{ feature.data.title }}</span>
+
+                        <p class="card__content__text">{{ feature.data.text }}</p>
+                        
+                        <a class="btn btn--card" href="{{ feature.url }}">
+                            <span>Discover feature </span>
+
+                            <span class="btn--card__icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</article>

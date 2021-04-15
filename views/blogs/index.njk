@@ -1,0 +1,73 @@
+---
+layout: base
+tags:
+eleventyNavigation:
+    key: Blogs
+    order: 3
+---
+
+<article class="h-layout h-layout-p">
+    <h1 class="spaceLeft spaceRight">Our Blogs</h1>
+
+    {% if collections.blogs | highlighted | length %}
+        <section class="cardsList fade-in-up">
+            <h2 class="cardsList__title">Trending this week in Blogs</h2>
+
+            <ul class="cardsList__list cardsList__list--wrap">
+                {% for blog in collections.blogs | highlighted %}
+                    <li class="card">
+                        <div class="display-image--sixteen-nine">
+                            <img class="card-img" src="/assets/img/blog/{{ blog.data.img }}" alt="{{ blog.data.alt }}">
+                        </div>
+
+                        <div class="card__content">
+                            <span class="card__content__title">{{ blog.data.title }}</span>
+
+                            <p class="card__content__text">{{ blog.data.text }}</p>
+
+                            <a class="btn btn--card" href="{{ blog.url }}">
+                                <span>Read full blog</span>
+                                
+                                <span class="btn--card__icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+        </section>
+    {% endif %}
+
+    {% if collections.blogs | others | length %}
+        <section class="cardsList fade-in-up">
+            <h2 class="cardsList__title">Other blogs</h2>
+
+            <ul class="cardsList__list cardsList__list--wrap">
+                {% for blog in collections.blogs | others %}
+                    <li class="card">
+                        <div class="display-image--sixteen-nine">
+                            {% if blog.data.contain === true %}
+                                <img class="card-img img-contain" src="/assets/img/blog/{{ blog.data.img }}" alt="{{ blog.data.alt }}">
+                            {% else %}
+                                <img class="card-img" src="/assets/img/blog/{{ blog.data.img }}" alt="{{ blog.data.title }}">
+                            {% endif %}
+                        </div>
+
+                        <div class="card__content">
+                            <span class="card__content__title">{{ blog.data.title }}</span>
+
+                            <p class="card__content__text">{{ blog.data.text }}</p>
+
+                            <a class="btn btn--card" href="{{ blog.url }}">
+                                <span>Read full blog</span>
+
+                                <span class="btn--card__icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+        </section>
+    {% endif %}
+</article>

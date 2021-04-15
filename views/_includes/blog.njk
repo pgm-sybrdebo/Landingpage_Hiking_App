@@ -1,0 +1,17 @@
+--- 
+layout: base
+--- 
+
+<article class="wysiwyg fade-in-up">
+    <h1>{{ title }}</h1>
+
+    <div class="citation columnContainer">
+        <span class="text-italic">By {{ author }}</span>
+
+        <span class="text-italic">{{ release }}</span>
+    </div>
+
+    <img src="/assets/img/blog/{{ img }}" alt="{{ alt }}">
+    
+    {{ content | safe }}
+</article>

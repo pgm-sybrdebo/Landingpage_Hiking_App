@@ -1,0 +1,121 @@
+---
+layout: base
+title: Home
+eleventyNavigation:
+    key: Home
+    order: 1
+---
+
+<h1 class="sr-only">Hikeventure</h1>
+
+<section class="mockupHero mockupHero--home h-layout h-layout-np" aria-label="Hero">
+    <div class="mockupHero__left">
+        <img class="mockupHero__left__landscape" src="/assets/img/landscape.jpg" alt="landscape">
+
+        <img class="mockupHero__left__mockup mockupHero__left__mockup--home" src="/assets/img/homeApp.png" alt="home app">
+    </div>
+
+    <div class="mockupHero__right">
+        <h2 class="mockupHero__right__title">What you might like</h2>
+
+        {% for suggestion in suggestions %}
+            <div class="mockupHero__right__suggestions">
+                <h3 class="mockupHero__right__suggestions__title">{{ suggestion.title }}</h3>
+
+                <p>{{ suggestion.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="cardsList fade-in-up h-layout h-layout-p" aria-label="Features">
+    <h2 class="cardsList__title">Features</h2>
+
+    <div class="cardsList__container">
+        <div class="cardsList__container__wrapper">
+            <ul class="cardsList__container__wrapper__list">
+                {% for feature in collections.features %}
+                    <li class="card card--overflow">
+                        <span class="card__icon">
+                            <i class="fas {{ feature.data.icon }}"></i>
+                        </span>
+                        
+                        <div class="card__content">
+                            <span class="card__content__title">{{ feature.data.title }}</span>
+                            
+                            <p class="card__content__text">{{ feature.data.text }}</p>
+                            
+                            <a class="btn btn--card" href="{{ feature.url }}">
+                                <span>Discover feature </span>
+                                    
+                                <span class="btn--card__icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> 
+</section>
+
+<section class="cardsList fade-in-up h-layout h-layout-p" aria-label="Testimonials">
+    <h2 class="cardsList__title">Testimonials</h2>
+
+    <ul class="cardsList__list">
+        {% for quote in quotes %}
+            <li class="card card--testimonial">
+                <blockquote class="card__quote">{{ quote.quote }}</blockquote>
+
+                <div class="card__author">
+                    <img class="profile-img" src="{{ quote.img }}" alt="{{ quote.author }}">
+                    
+                    <span class="card__author__name">{{ quote.author }}</span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="cardsList fade-in-up h-layout h-layout-p" aria-label="Customers">
+    <h2 class="cardsList__title">Customers</h2>
+
+    <ul class="cardsList__list cardsList__list--customers">
+        {% for customer in customers %}
+            <li class="cardsList__list__customer">
+                <img class="logo-img" src="{{ customer.img }}" title="{{ customer.name }}" alt=" {{ customer.name }} logo">
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% if collections.blogs | highlighted | length %}
+    <section class="cardsList fade-in-up h-layout h-layout-p" aria-label="Trending Blogs">
+        <h2 class="cardsList__title">Trending this week in Blogs</h2>
+
+        <ul class="cardsList__list">
+            {% for blog in collections.blogs | highlighted %}
+                <li class="card">
+                    <div class="display-image--sixteen-nine">
+                        <img class="card-img" src="/assets/img/blog/{{ blog.data.img }}" alt="{{ blog.data.alt }}">
+                    </div>
+
+                    <div class="card__content">
+                        <span class="card__content__title">{{ blog.data.title }}</span>
+
+                        <p class="card__content__text">{{ blog.data.text }}</p>
+
+                        <a class="btn btn--card" href="{{ blog.url }}">
+                            <span>Read full blog</span>
+
+                            <span class="btn--card__icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

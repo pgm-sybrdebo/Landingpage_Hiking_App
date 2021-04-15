@@ -1,0 +1,61 @@
+.mockupHero {
+    display: flex;
+    padding: $space-base $space-base $space-base 0;
+    margin-top: $space-base;
+    margin-bottom: $space-xlg;
+
+    &--home {
+        margin-bottom: $space-elg;
+    }
+
+    &__left {
+        width: 65%;
+        position: relative;
+
+        &__landscape {
+            width: 100%;
+            border-radius: 0 $radius-base $radius-base 0;
+        }
+
+        &__mockup {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &--home {
+                width: 35%;
+                top: $space-base;
+            }
+
+            &--feature {
+                width: 70%;
+                top: $space-lg;
+            }
+        }
+    }
+
+    &__right {
+        width: 35%;
+        padding-left: $space-base;
+
+        &__headTitle {
+            padding-top: 0;
+        }
+
+        &__title {
+            &:before {
+                @include circle();
+            }
+        }
+
+        &__suggestions {
+            border-bottom: 1px solid $divider-color;
+            padding-bottom: $space-eSmall;
+            margin-bottom: $space-medium;
+
+            &__title {
+                padding-bottom: 0 $space-eSmall;
+            }
+        }
+    } 
+}

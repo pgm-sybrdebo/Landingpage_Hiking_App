@@ -1,0 +1,100 @@
+---
+layout: contactAbout
+title: about us
+eleventyNavigation:
+    key: About us
+    order: 4
+permalink: "about-us/"
+---
+
+<h1 class="sr-only">About us</h1>
+
+<section class="fullWidthContainer fade-in-up h-layout h-layout-np">
+    <div class="display-image--sixteen-six">
+        <img class="hero-img" src="/assets/img/aboutUs/office.jpg" alt="Our team in a meeting">
+    </div>
+</section>
+
+<section class="aboutContact__twoColumn fade-in-up h-layout h-layout-p" aria-label="Who Are We?">
+    <div class="aboutContact__twoColumn__column">
+        <figure class="display-image--three-two ">
+            <img src="/assets/img/aboutUs/meeting.jpg" alt="Our team in a meeting">
+        </figure>
+    </div>
+
+    <div class="aboutContact__twoColumn__column">
+        <h2 class="centerTitle">Who are we?</h2>
+
+        <p>Hikeventure is a walking app with a wide range of walking routes all over the world. We provide walking routes for both novice walkers to passionate walkers. You can opt for walks in forests to enjoy the beautiful nature or to sniff the long-distance routes, both at home and abroad. The world is full of wonders so every walk is an adventure too. The world is made up of thousands of plants and animals, and you will probably never be able to see them all. But you should also not forget to visit the beautiful culture that the people have left for us. Experience adventures in unique places combined with visiting culture, architecture, historical and religious buildings to venture into the exciting wilderness.</p>
+    </div>
+</section>
+
+<section class="listItems fullWidthContainer fade-in-up h-layout h-layout-np" aria-label="Our Values">
+    <h2>Our values</h2>
+
+    <ul class="listItems__list">
+        {% for value in ourValues %}
+            <li class="listItems__list__item listItems__list__item--values">
+                <img class="value-img" src="{{ value.img }}" alt="{{ value.alt }}">
+
+                <span>{{ value.text }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="aboutContact__twoColumn fade-in-up h-layout h-layout-p" aria-label="Our Story">
+    <div class="aboutContact__twoColumn__column">
+        <h2 class="centerTitle">Our story</h2>
+
+        <p>We started our story with the dream of shaking up the hiking community. We were tired of the existing great hiking apps that only focused on the sporting story. But walking is so much more than just sports. Walking is life! Every hike is a true adventure with unexpected twists. We were therefore convinced that we could convey this experience to our users. These ideas led to the birth of Hikeventure in 2019. Today we are a well-known name in the hiking community and we remain committed to the hiking experience. Because every walk is an adventure!</p>
+    </div>
+
+    <div class="aboutContact__twoColumn__column">
+        <figure class="display-image--three-two ">
+            <img src="/assets/img/aboutUs/aboutUsParty.jfif" alt="Our atmosphere at work">
+        </figure>
+    </div>
+</section>
+
+<section class="listItems fullWidthContainer fade-in-up h-layout h-layout-np" aria-label="Our Team">
+    <h2>Our team</h2>
+
+    <ul class="listItems__list">
+        {% for member in ourTeamMembers %}
+            <li class="listItems__list__item">
+                <img class="teamMember-img" src="{{ member.img }}" alt="{{ member.alt }}">
+
+                <span>{{ member.firstName }}, {{ member.function }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="aboutContact__twoColumn fade-in-up h-layout h-layout-p" aria-label="Join Our Team">
+    <div class="aboutContact__twoColumn__column">
+        <figure class="display-image--three-two ">
+            <img src="/assets/img/aboutUs/colleagues.jpg" alt="colleague is working on a computer">
+        </figure>
+    </div>
+
+    <div class="joinTeam aboutContact__twoColumn__column">
+        <h2>Want to work with us?</h2>
+
+        <p>The Hikeventure team is passionate about building the world's most engaged community of hikers. We are committed to our mission, our adventurers, each other and our business. Join us!</p>
+
+        <button class="btn btn--card btn--join">
+            <span>View open positions</span>
+            
+            <span class="btn--card__icon">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+        </button>
+    </div>
+</section>
+
+<section class="fullWidthContainer fade-in-up h-layout h-layout-np">
+    <div class="display-image--sixteen-six">
+        <img class="hero-img" src="/assets/img/aboutUs/relaxation.jpg" alt="Our team in a meeting">
+    </div>
+</section>

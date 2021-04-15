@@ -1,0 +1,98 @@
+.form {
+    width: calc(50% - 5rem);
+    margin-left: 10rem;
+
+    &__radio {
+        padding-top: $space-sbase;
+
+        label {
+            display: block;
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: $space-base;
+            font-size: $text-md;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:hover input~.checkmark {
+                background-color: $radioButton-hoverColor;
+            }
+
+            &:last-child {
+                margin-bottom: $space-emedium;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+
+                &:checked~.checkmark {
+                    background-color: $accent-color;
+
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1.5625rem;
+                width: 1.5625rem;
+                background-color: $radioButton-color;
+                border-radius: $radius-round;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    top: 0.5625rem;
+                    left: 0.5625rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: $radius-round;
+                    background: $primary-backgroundColor;
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        text-transform: uppercase;
+        margin-top: $space-small;
+    }
+
+    &__input {
+        background-color: $input-backgroundColor;
+        margin: $space-sbase 0 $space-base 0;
+        border-radius: $radius-sm;
+        border: 1px solid $input-borderColor;
+        width: 100%;
+        padding: $space-small $space-base;
+        font-size: 1rem;
+        font-family: 'Roboto';
+
+        &:focus {
+            border-color: $accent-color;
+            outline: $accent-color;
+        }
+    }
+
+    &__select {
+        margin: $space-sbase 0 $space-base 0;
+        padding: $space-small $space-base;
+        width: 100%;
+    }
+
+    &__textarea {
+        padding: $space-small $space-base;
+
+    }
+}

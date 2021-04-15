@@ -1,0 +1,106 @@
+---
+layout: contactAbout
+title: contact us
+eleventyNavigation:
+    key: Contact us
+    order: 5
+permalink: "contact-us/"
+---
+
+<div class="contact fade-in-up h-layout h-layout-p">
+    <section class="contact__intro fade-in-up h-layout h-layout-p" aria-label="Contact Introduction">
+        <h1>Contact us</h1>
+
+        <p>Any question or remarks? Just write us a message!</p>
+    </section>
+
+    <section class="contact__information" aria-label="Contact Information">
+        <h2>Contact details</h2>
+
+        {% for contact in contact %}
+            <h3>{{ contact.title }}</h3>
+            
+            <a href="{{ contact.link }}" class="contact__information__item">
+                <span class="contact__information__item__icon">
+                    <i class="fas {{ contact.icon }}"></i>
+                </span>
+
+                <span class="contact__information__item__text">{{ contact.text }}</span>
+            </a>
+        {% endfor %}
+        
+        <h3>Social media</h3>
+
+        {% for social in socials %}
+            <a href="{{ social.link }}" class="contact__information__item">
+                <img src="{{ social.img }}" alt="{{ social.alt }}">
+
+                <span class="contact__information__item__text">{{ social.text }}</span>
+            </a>
+        {% endfor %}
+    </section>
+
+    <section class= "form fade-in-up" aria-label="Send Message Form">
+        <h2>Send us a message</h2>
+
+        <form id='contactForm' action="index.njk" method="get">
+            <span class="form__label">I prefer to be contacted via:</span>
+
+            <div class="form__radio">    
+                <label for="contactEmail">Email
+                    <input type="radio" id="contactEmail" name="contact" value="email" checked>
+
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label for="contactPhone">Phone
+                    <input type="radio" id="contactPhone" name="contact" value="phone">
+
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div>
+                <label class="form__label" for="name">NAAM *</label>
+
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your Name" required="required">
+            </div>
+
+            <div>
+                <label class="form__label" for="email">EMAIL *</label>
+
+                <input class="form__input" type="email" id="email" name="email" minlength="4" required="required" placeholder="YourEmail@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+
+            <div>
+                <label class="form__label" for="tel">PHONE *</label>
+
+                <input class="form__input" type="tel" id="tel" name="tel" minlength="9" maxlength="12" required="required" placeholder="+32 123 45 67 89" pattern="[+]{1}[0-9]{11,14}">
+            </div>
+
+            <label class="form__label" for="subjectQuestion">What do you want to contact us about? *</label>
+
+            <select class="form__input form__select" name="subjectQuestion" id="subjectQuestion" required>
+                <option value="">--Please choose an option--</option>
+
+                <option value="membership">I want information about membership </option>
+
+                <option value="myMembership">I have a question about my membership</option>
+
+                <option value="myAccount">I cannot log in to my account</option>
+
+                <option value="other">I have another question</option>
+            </select>
+
+            <div>
+                <label class="form__label" for="message">Message *</label>
+
+                <textarea class="form__input contact__form__textarea" id="message" name="message" rows="5" cols="33" width="100%" placeholder="Your message ..." required></textarea> 
+            </div>
+
+            <button class="btn btn--submit" type="submit"></button>
+        </form>
+    </section>
+</div>
+
+<iframe class="map fade-in-up h-layout h-layout-np" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.1741993576593!2d3.6683319160335657!3d51.08679257956817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c37049c2ee923b%3A0x268fc495b0688754!2sIndustrieweg%20232%2C%209030%20Gent!5e0!3m2!1snl!2sbe!4v1616391326295!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

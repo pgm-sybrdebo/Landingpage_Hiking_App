@@ -1,0 +1,50 @@
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: $normal-transition;
+
+    &.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.zoom-in-out:hover {
+    animation-name: inOutZoom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.btn--card:hover {
+    &:before {
+        width: 100%;
+    }
+
+    & .btn--card__icon {
+        transform: translateX($space-eSmall);
+    }
+}
+
+.footer__top__left__download__item:hover {
+    transform: translateY(-$space-eSmall);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .zoom-in-out:hover {
+        animation: none
+    }
+
+    .btn--card:hover .btn--card__icon {
+        transform: translateX(0);
+    }
+
+    .footer__top__left__download__item:hover {
+        transform: translateY(0);
+    }
+}

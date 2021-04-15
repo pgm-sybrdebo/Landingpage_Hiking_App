@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - {{ site.title }}</title>
+    <script src="https://kit.fontawesome.com/a51df80b94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/main.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href="/assets/img/favicon/favicon.ico">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <a href="#mainContent" class="sr-only">Skip to main content</a>
+    
+    {% include "_components/header.njk" %}
+
+    <main id="mainContent" class="container">
+        {{ content | safe }}
+    </main>
+
+    {% include "_components/footer.njk" %}
+
+    <script src="/assets/animations.js"></script>
+    <script src="/assets/horizontalScrollWatcher.js"></script>
+    <script src="/assets/footerNavigation.js"></script>
+</body>
+</html>

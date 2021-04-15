@@ -1,0 +1,91 @@
+// layout
+
+.h-layout {
+    width: 100%;
+    margin: 0 auto;
+
+    &-p {
+        max-width: 83rem;
+    }
+
+    &-np {
+        max-width: 80rem;
+    }
+}
+
+.fullWidthContainer {
+    width: 100%;
+}
+
+.spaceLeft {
+    margin-left: $space-base;
+}
+
+.spaceRight {
+    margin-right: $space-base;
+}
+
+.spaceTop {
+    margin-top: $space-lg;
+}
+
+// text
+
+[aria-current=page] {
+    & span {
+        color: $header-hoverColor;
+        font-weight: bold;
+        border-bottom: 3px solid $accent-color !important;
+    }
+
+    & .up-arrow, .down-arrow  {
+        border-bottom: none !important;
+    }
+}
+
+.centerTitle {
+    text-align: center;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+// fog
+
+.left-fog {
+    &:before {
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        background: linear-gradient(to right, $primary-white, transparent);
+    }
+}
+
+.right-fog {
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      width: 10%;
+      height: 100%;
+      background: linear-gradient(to left, $primary-white, transparent);
+    }
+  }
+
+// sr
+
+.sr-only {
+    position:absolute;
+    left:-1000rem;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

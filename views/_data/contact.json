@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Phone",
+        "text": "+32 476 32 84 96",
+        "icon": "fa-phone-alt",
+        "link": "tel:+32476328496",
+        "alt": "phone number icon"
+    },
+    {
+        "title": "Email",
+        "text": "info@hikeventure.com",
+        "icon": "fa-envelope",
+        "link": "mailto:info@hikeventure.com",
+        "alt": "email icon"
+    },
+    {
+        "title": "Location",
+        "text": "232 Industrieweg 9000 Gent",
+        "icon": "fa-map-marker-alt",
+        "link": "https://www.google.com/maps/search/?api=1&query=Industrieweg%20232,%20Gent",
+        "alt": "location icon"
+    }
+]

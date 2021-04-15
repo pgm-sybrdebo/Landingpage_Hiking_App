@@ -1,0 +1,17 @@
+--- 
+layout: base
+--- 
+
+<article class="mockupHero h-layout h-layout-np">
+    <div class="mockupHero__left">
+        <img class="mockupHero__left__landscape" src="/assets/img/{{ landscapeImg }}" alt="landscape">
+
+        <img class="mockupHero__left__mockup mockupHero__left__mockup--feature" src="/assets/img/features/{{ mockupImg }}" alt="{{ altFeature }}">
+    </div>
+
+    <div class="mockupHero__right">
+        <h1 class="mockupHero__right__headTitle">{{ title }}</h1>
+
+        {{ content | safe }}
+    </div>
+</article>

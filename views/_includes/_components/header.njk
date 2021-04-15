@@ -1,0 +1,43 @@
+ {% set navPages = collections.all | eleventyNavigation %}
+
+<header class="header">
+    <div class="header-container h-layout h-layout-np">
+        <a class="header__logo zoom-in-out" href="/">
+            <img class="hikeventure-logo" src="/assets/img/logo.png" alt="Hikeventure logo">
+        </a>
+
+        <span class= "header__slogan">Every hike is an adventure</span>
+
+        <nav class="navbar" aria-label="Header Primary Navigation">
+            <ul class="navbar__primaryNavigation">
+                {% for navPage in navPages %}
+                    <li>
+                        <a href="{{ navPage.url | url }}"
+                            {% if navPage.url | replace("/", "") == page.url.split('/')[1] %}
+                                aria-current="page"
+                            {% endif %}>
+                            
+                            <span class="navigation__item">{{ navPage.key }}</span>
+                        </a>
+
+                        {% if navPage.children %}
+                            <ul class="navbar__primaryNavigation__secondaryNavigation" aria-label="Header Secondary Navigation">
+                                {% for navChildPage in navPage.children %}
+                                    <li>
+                                        <a href="{{ navChildPage.url | url }}"
+                                            {% if navChildPage.url == page.url %}
+                                                aria-current="page"
+                                            {% endif %}>
+                                        
+                                            <span class="navigation__item">{{ navChildPage.key }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

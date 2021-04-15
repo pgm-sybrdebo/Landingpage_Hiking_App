@@ -1,0 +1,26 @@
+[
+    {
+        "img": "/assets/img/aboutUs/team/thomas.jpg",
+        "alt": "Thomas De Rover",
+        "firstName": "Thomas",
+        "function": "Owner"
+    },
+    {
+        "img": "/assets/img/aboutUs/team/sophie.jpg",
+        "alt": "Sophie Demets",
+        "firstName": "Sophie",
+        "function": "Marketing manager"
+    },
+    {
+        "img": "/assets/img/aboutUs/team/william.jpg",
+        "alt": "William D'hooghe",
+        "firstName": "William",
+        "function": "Finance manager"
+    },
+    {
+        "img": "/assets/img/aboutUs/team/chloe.jpg",
+        "alt": "Chloe Bennet",
+        "firstName": "Chloe",
+        "function": "Project manager"
+    }
+]

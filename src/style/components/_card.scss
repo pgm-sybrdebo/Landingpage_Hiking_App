@@ -1,0 +1,90 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 2rem);
+    min-width: 23.25rem;
+    padding-bottom: $space-base;
+    margin-left: $space-lg;
+    margin-bottom: $space-lg;
+    border-radius: $radius-base;
+    background-color: $primary-backgroundColor;
+    box-shadow: rgba(50, 50, 93, 0.25) 10px 20px 40px -20px, rgba(0, 0, 0, 0.3) 0px 12px 24px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    &--testimonial {
+        justify-content: center;
+        padding: $space-base;
+    }
+
+    &__icon {
+        font-size: 8rem;
+        padding-top: $space-base;
+        color: $primary-textColor;
+        text-align: center;
+    }
+
+    .img-contain {
+        object-fit: contain;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        &__title {
+            font-size: $text-md;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+            padding: $space-base;
+        }
+
+        &__text {
+            text-align: center;
+            padding: 0 $space-base;
+            margin-bottom: $space-medium;
+        }
+    }
+
+    &:nth-child(3n + 1) {
+        margin-left: 0;
+    }
+
+    &--overflow {
+        &:nth-child(3n + 1) {
+            margin-left: $space-lg;
+        }
+        
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__quote {
+        font-style: italic;
+        padding-top: $space-medium;
+        position: relative;
+        margin: 0 0 $space-medium 0;
+    }
+
+    &__quote::before {
+        display: block;
+        content: "\201C";
+        font-size: 4rem;
+        position: absolute;
+        top: -1rem;
+        left: 0rem;
+        color: $accent-color;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &__name {
+            margin-left: $space-small;
+        }
+    }
+}

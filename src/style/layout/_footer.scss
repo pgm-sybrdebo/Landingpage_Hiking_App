@@ -1,0 +1,145 @@
+.footer {
+    padding: $space-base;
+    background-color: $header-backgroundColor;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &__left {
+            display: flex;
+            margin-top: $space-sbase;
+    
+            &__download {
+                margin-left: $space-medium;
+                display: flex;
+                margin-top: 1.25rem;
+    
+                &__text {
+                    color: $header-textColor;
+                    font-weight: bold;
+                    margin-right: $space-medium;
+                    margin-top: $space-base;
+                }
+    
+                &__apple {
+                    width: 7.7rem;
+                    border-radius: 5px;
+                    margin: 0.6rem;
+                    border: 1px solid #a6a6a6;
+                    transition: $normal-transition;
+                }
+    
+                &__google {
+                    width: 10rem;
+                    transition: $normal-transition;
+                }
+            }
+        }
+    
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+            width: 40%;
+    
+            &__navigation {
+                &__list {
+                    width: 11rem;
+
+                    li {
+                        padding-bottom: $space-small;
+                    }
+        
+                    a {
+                        color: $header-textColor;
+                        text-decoration: none;
+                        
+                        & span {
+                            transition: $normal-transition;
+                        }
+
+                        & .navigation__item {
+                            border-bottom: 3px solid transparent;
+                            transition: $normal-transition;
+                        }
+                    }
+        
+                    a:hover  {
+                        & span {
+                            color: $header-hoverColor;
+                        }
+
+                        & .navigation__item {
+                            border-bottom: 3px solid $accent-color;
+                        }
+                    }
+    
+                    .secondaryNavigation {
+                        display: none;
+                        margin-left: $space-sbase;
+                        margin-top: $space-eSmall;
+                        padding-left: $space-eSmall;
+                        border-left: 3px solid $primary-backgroundColor;
+    
+                        &--open {
+                            display: block;
+                        }
+                    }
+    
+                    .fa-chevron-up {
+                        margin-left: $space-eSmall;
+                        transition: $normal-transition;
+                    }
+    
+                    .down-arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            &__social {
+                margin-left: 5rem;
+                margin-top: $space-small;
+    
+                span {
+                    color: $header-textColor;
+                    display: block;
+                    padding-bottom: 1rem;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+    
+                &__list {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    li {
+                        width: 3rem;
+    
+                        svg {
+                            fill: $header-textColor;
+                            width: 2.5rem;
+                            transition: $normal-transition;
+                        }
+    
+                        a:hover svg {
+                            fill: $header-hoverColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        .copyright {
+            display: block;
+            margin-top: 2rem;
+            display: block;
+            text-align: center;
+            color: $header-textColor;
+        }
+    }  
+}

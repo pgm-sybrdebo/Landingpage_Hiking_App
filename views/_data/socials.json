@@ -1,0 +1,26 @@
+[
+    {
+        "text": "Like our Facebook page",
+        "img": "/assets/img/socials/facebook_icon.svg",
+        "link": "https://www.facebook.com/arteveldehogeschool/",
+        "alt": "facebook icon"
+    },
+    {
+        "text": "Get our Twitter updates",
+        "img": "/assets/img/socials/twitter_icon.svg",
+        "link": "https://twitter.com/ArteveldehsGent?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+        "alt": "twitter icon"
+    },
+    {
+        "text": "Get our Instagram updates",
+        "img": "/assets/img/socials/instagram_icon.svg",
+        "link": "https://www.instagram.com/arteveldehogeschool/?hl=nl",
+        "alt": "instagram icon"
+    },
+    {
+        "text": "See our newest videos on Youtube",
+        "img": "/assets/img/socials/youtube_icon.svg",
+        "link": "https://www.youtube.com/channel/UCHly8VZULSMWEmvbPJNVtFA",
+        "alt": "youtube icon"
+    }
+]

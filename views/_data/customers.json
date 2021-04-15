@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Apple",
+        "img": "/assets/img/logos/apple-black.svg"
+    },
+    {
+        "name": "Coca Cola",
+        "img": "/assets/img/logos/coca-cola.svg"
+    },
+    {
+        "name": "Decathlon",
+        "img": "/assets/img/logos/decathlon-logo.svg"
+    },
+    {
+        "name": "Dell",
+        "img": "/assets/img/logos/dell-2.svg"
+    },
+    {
+        "name": "Hp",
+        "img": "/assets/img/logos/hp-2.svg"
+    },
+    {
+        "name": "IBM",
+        "img": "/assets/img/logos/ibm.svg"
+    },
+    {
+        "name": "Nike",
+        "img": "/assets/img/logos/nike-4.svg"
+    },
+    {
+        "name": "Spotify",
+        "img": "/assets/img/logos/spotify.svg"
+    },
+    {
+        "name": "Volkswagen",
+        "img": "/assets/img/logos/volkswagen-3.svg"
+    },
+    {
+        "name": "Willy Naessens",
+        "img": "/assets/img/logos/willy-naessens.svg"
+    }
+]

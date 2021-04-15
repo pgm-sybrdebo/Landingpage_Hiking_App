@@ -1,0 +1,50 @@
+img {
+    width: 100%;
+    border-radius: $radius-base; 
+}
+
+.hikeventure-logo {
+    width: 10rem;
+}
+
+.hero-img {
+    border-radius: 0;
+}
+
+.card-img {
+    border-radius: $radius-base $radius-base 0 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 3rem;
+}
+
+.teamMember-img {
+    border-radius: 50%;
+    width: 10rem;
+}
+
+.logo-img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.value-img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.display-image {
+    &--sixteen-six {
+        @include aspect-ratio(37.5%);
+    }
+
+    &--three-two {
+        @include aspect-ratio(66.67%);
+    }
+
+    &--sixteen-nine {
+        @include aspect-ratio(56.25%);
+    }
+}
